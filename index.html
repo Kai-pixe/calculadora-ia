@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Calculadora IA</title>
+<meta name="theme-color" content="#4f46e5">
+<!-- iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Calc IA">
+<!-- ICONOS (carpeta icons/, nombres exactos, PNG opaco):
+     icon-192.png (192x192) · icon-512.png (512x512, any maskable) · apple-touch-icon.png (180x180)
+     Se generan con: python3 make_icons.py -->
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header><h1>Calculadora IA</h1><button id="install" hidden>⬇ Instalar</button></header>
+  <section class="disp"><div id="expr"></div><div id="out">0</div></section>
+  <section id="keys"></section>
+  <section class="ai">
+    <form id="aiForm">
+      <input id="q" maxlength="400" placeholder="Pregunta a la IA: ¿18% de 2.450?" autocomplete="off">
+      <button class="go">Preguntar</button>
+    </form>
+    <div id="ans" hidden><p id="exp"></p><button id="use" hidden></button></div>
+  </section>
+</main>
+<div id="ios" hidden>
+  <p>Para instalar: toca <b>Compartir</b> (⎋) y luego <b>«Añadir a la pantalla de inicio»</b>.</p>
+  <button id="iosClose">Entendido</button>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
